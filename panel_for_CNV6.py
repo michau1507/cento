@@ -8,31 +8,7 @@ from openpyxl import load_workbook
 family_id=None
 order_id=None
 
-"""
 
-ILLU='//srv-files//NGS-SeqData//Illumina//{}'.format(familyID)
-print(ILLU)
-print(os.path.exists('//srv-files//NGS-SeqData//Illumina//'))
-
-
-if os.path.exists(ILLU) == True:
-	for file in os.listdir(ILLU):
-		if file.endswith('.xls') and orderID in file:
-
-
-		df=pd.read_excel('test_CNV.xls')
-
-		df=pd.DataFrame(df)
-		#print(df['Approved Symbol'])
-
-		a=['CFAP74','PRDM16','FAM231C'] CFAP74,PRDM16,FAM231C,AGRN
-		df2=df[df['Approved Symbol'].apply(lambda x: any(i in x for i in a))]
-		df2.to_excel('output.xlsx')
-		62516442 2305019
-		Genome: 2302292 62514081
-		2307232 62519070
-
-"""
 
 df=pd.read_excel('panels_and_genes.xlsx')
 df=pd.DataFrame(df)

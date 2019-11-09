@@ -74,17 +74,10 @@ def create_file():
 
 		path=ILLU+'//'+orderID+'_SV_filtered_'+'.xlsx'
 		writer = pd.ExcelWriter(path, engine='openpyxl')
-		#book = load_workbook(ILLU+orderID+'_'+familyID+'SV_filtered.xlsx')
-		#writer.book = book
-		#df.to_excel(writer, sheet_name='Unfiltered')
 		df2.to_excel(writer, sheet_name='Filtered')
 		writer.save()
 		writer.close()
 
-		#writer = pd.ExcelWriter(ILLU+orderID+'_'+familyID+'SV_filtered.xlsx')
-		#df.to_excel(writer,'unfiltered')
-		#df2.to_excel(writer,'filtered')
-		#writer.save()
 		print(sel_panels)
 
 		list1.delete(0,END)
